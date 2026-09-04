@@ -178,3 +178,8 @@ This project is available for educational and personal use.
 ⭐ If you find this project useful, consider giving the repository a star!
 
 **GitHub:** `https://github.com/awabwdbashry-sketch/air-mouse-control`
+## 👨‍💻 Developer
+
+**Awab Bashary | AwabBuilds**
+
+GitHub: **awabwdbashry-sketch**
