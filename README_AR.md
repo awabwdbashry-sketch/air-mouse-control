@@ -180,3 +180,8 @@ air-mouse-control/
 ⭐ إذا أعجبك المشروع، لا تنسَ دعم المستودع بوضع Star!
 
 **GitHub:** `https://github.com/awabwdbashry-sketch/air-mouse-control`
+## 👨‍💻 Developer
+
+**Awab Bashary | AwabBuilds**
+
+GitHub: **awabwdbashry-sketch**
