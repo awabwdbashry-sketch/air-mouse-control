@@ -1,17 +1,17 @@
-# Air Mouse Control 🖱️✋
+# Finger Counter ✋🔢
 
-A computer vision project that turns hand gestures into mouse controls using a webcam.
+A real-time computer vision project that detects and counts raised fingers using a webcam.
 
-The project uses **MediaPipe Hands** to track hand landmarks and **PyAutoGUI** to control the system mouse through natural hand movements.
+The project uses **MediaPipe Hands** to track hand landmarks and **OpenCV** to process and display the result.
 
 ## ✨ Features
 
 * Real-time hand tracking
-* Move the mouse using the index finger
-* Click using a thumb/index finger pinch gesture
-* Open-palm detection to disable mouse control
-* Webcam-based interaction
-* Real-time visual feedback
+* Detects up to two hands
+* Counts raised fingers on each hand
+* Displays the total finger count
+* Supports counting from 0 to 10 fingers
+* Live webcam visualization
 
 ## 🛠️ Technologies
 
@@ -19,7 +19,6 @@ The project uses **MediaPipe Hands** to track hand landmarks and **PyAutoGUI** t
 * OpenCV
 * MediaPipe
 * NumPy
-* PyAutoGUI
 
 ## ⚙️ How It Works
 
@@ -27,25 +26,25 @@ The webcam captures the user's hand in real time.
 
 MediaPipe detects the hand landmarks and provides the coordinates of the fingers.
 
-The project then uses these landmarks to:
+The project analyzes the landmark positions to determine which fingers are raised and calculates the total number of raised fingers.
 
-1. Detect the user's hand.
-2. Track the index finger.
-3. Map finger movement to the computer screen.
-4. Detect a pinch between the thumb and index finger.
-5. Trigger a mouse click.
-6. Disable interaction when an open palm is detected.
+The application can detect:
+
+* Left hand
+* Right hand
+* Individual raised fingers
+* Total raised fingers
 
 ## 📦 Installation
 
 Clone the repository:
 
 ```bash
-git clone https://github.com/awabwdbashry-sketch/air-mouse-control.git
-cd air-mouse-control
+git clone https://github.com/awabwdbashry-sketch/finger-counter.git
+cd finger-counter
 ```
 
-Install the dependencies:
+Install the required dependencies:
 
 ```bash
 pip install -r requirements.txt
@@ -53,40 +52,36 @@ pip install -r requirements.txt
 
 ## ▶️ Usage
 
-Run:
+Run the application:
 
 ```bash
-python air_mouse.py
+python finger_counter.py
 ```
 
 Make sure your webcam is connected and accessible.
 
-Move your index finger to control the mouse.
-
-Use the supported pinch gesture to perform a click.
+Place your hand(s) in front of the camera and raise or lower your fingers to see the detected count.
 
 ## 📋 Requirements
 
 * Python 3.9+
 * Webcam
 * Windows, macOS, or Linux
-* Working internet connection during dependency installation
+* Internet connection for installing dependencies
 
 ## 📁 Project Structure
 
 ```text
-air-mouse-control/
-├── air_mouse.py
+finger-counter/
+├── finger_counter.py
 ├── requirements.txt
 ├── README.md
 └── .gitignore
 ```
 
-## ⚠️ Notes
+## 🔢 Supported Range
 
-PyAutoGUI controls the operating system mouse, so the application should be used carefully.
-
-The exact interaction behavior depends on the gesture detection logic implemented in `air_mouse.py`.
+The project can detect up to **10 raised fingers** when two hands are visible.
 
 ## 📄 License
 
